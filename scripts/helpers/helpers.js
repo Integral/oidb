@@ -1,5 +1,5 @@
 Backbone.Layout.configure({
-  prefix: "/scripts/templates/",
+  prefix: "scripts/templates/",
 
   // This method will check for prebuilt templates first and fall back to
   // loading in via AJAX.
