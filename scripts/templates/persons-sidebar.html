@@ -1,0 +1,7 @@
+<ul class="nav nav-list">
+  <li class="nav-header">Тип</li>
+	<% _.each(facet.types.models, function(type) { %><li><a href="#" data-type="<%= type.attributes._id %>"><%= type.attributes._id %> <span class="badge"><%= type.attributes.value %></span></a></li> <% }); %>
+	<li class="divider"></li>
+	<li class="nav-header">Регион</li>
+	<% _.each(facet.regions.models, function(region) { %><li><a href="#" data-region="<%= region.attributes._id %>"><%= region.attributes._id %> <span class="badge"><%= region.attributes.value %></span></a></li> <% }); %>
+</ul>

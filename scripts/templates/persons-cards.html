@@ -1,0 +1,31 @@
+  <div class="clip-content ellipsis">
+    <div class="dotdotdot" style="height: auto; width: auto;">
+      <div class="clip-content-header">
+	<h3 class="clip-title ellipsis"><div class="dotdotdot" style="height: auto; width: auto;"><%= person.lastName + ' ' + person.firstName + ' ' + person.middleName %></div></h3>
+      </div>
+      <div class="clip-description">
+	<address>
+	  <ul class="phone">
+	    <% _.each(person.phone, function(phone) { %> <li><i class="icon-bell"></i> <%= phone %></li> <% }); %>
+	  </ul>
+	  <ul class="phone">
+	    <% _.each(person.email, function(email) { %> <li><i class="icon-envelope"></i> <%= email %></li> <% }); %>
+	  </ul>
+	   <ul class="facebook">
+	    <% _.each(person.facebook, function(facebook) { %> <li><b>f:</b> <%= facebook %></li> <% }); %>
+	  </ul>
+	   <ul class="twitter">
+	    <% _.each(person.twitter, function(twitter) { %> <li><b>t:</b> <%= twitter %></li> <% }); %>
+	  </ul>
+	</address>
+      </div>
+    </div>
+  </div>
+  <div class="clip-footer">
+    <div class="clip-footer-element clip-source first">
+      <i class="icon-user"></i><%= person.edited.author %>
+    </div>
+    <span class="clip-footer-element clip-date">
+      <span class="datetime"><%= moment.unix(person.edited.time).fromNow() %></span>
+    </span>
+  </div>

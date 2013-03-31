@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+  	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>OvdInfo database</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+		<link rel="stylesheet" href="styles/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" href="styles/bootstrap/css/bootstrap-responsive.css"/>
+		<link rel="stylesheet" href="scripts/vendor/backgrid/backgrid.css"/>
+		<link rel="stylesheet" href="scripts/vendor/backgrid/extensions/moment-cell/backgrid-moment-cell.css"/>
+		<link rel="stylesheet" href="scripts/vendor/backgrid/extensions/paginator/backgrid-paginator.css" />		
+		<link rel="stylesheet" href="scripts/vendor/forms/templates/bootstrap.css"/>
+  	<link rel="stylesheet" href="scripts/vendor/select2/select2.css"/>
+  	<link rel="stylesheet" href="scripts/vendor/visualsearch/visualsearch-datauri.css"/>
+	</head>
+  <body>
+		<div id="wrap">
+			<div role="main" id="main" class="container-fluid">
+	    	<div class="navbar navbar-inverse navbar-fixed-top">
+					<div class="navbar-inner">
+		    		<div class="container-fluid">
+							<a class="brand" href="/">OVD-Info DB</a>
+							<ul class="nav">
+			    			<li><a href="/persons"><i class="icon-user icon-white"></i> Адресная книга</a></li>
+								<li><a href="/detentions"><i class="icon-bell icon-white"></i> Задержания</a></li>
+								<li><a href="/offenses"><i class="icon-eye-open icon-white"></i> Нарушения</a></li>
+								<li><a href="/trials"><i class="icon-cog icon-white"></i> Суды</a></li>
+								<li><a href="/actions"><i class="icon-fire icon-white"></i> Мероприятия</a></li>
+								<li><a href="/demands"><i class="icon-inbox icon-white"></i> Потребности</a></li>
+							</ul>
+							<ul class="nav pull-right">
+        				<li id="locations-menu" class="dropdown">
+          				<a href="#" id="locations" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe icon-white"></i> Локации <b class="caret"></b></a>
+          				<ul class="dropdown-menu" role="menu" aria-labelledby="locations">
+            				<li><a tabindex="-1" href="/locations/ovds">ОВД</a></li>
+            				<li><a tabindex="-1" href="/locations/courts">Суды</a></li>
+            				<li><a tabindex="-1" href="/locations/special-detentions-centers">Спецприемники</a></li>
+          				</ul>
+        				</li>
+      				</ul>
+		    		</div>
+					</div>
+	    	</div>
+	    	<div class="container-fluid data-cont"></div>
+			</div>
+		</div>
+		<div id="footer">
+    	<div class="container">
+      	<p class="muted credit">OvdInfo database.</p>
+    	</div>
+  	</div>        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <!-- build:js scripts/scripts.js -->
+  	<script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/underscore.js"></script>
+		<script src="scripts/vendor/moment.min.js"></script>
+		<script src="scripts/vendor/bootstrap.js"></script>
+    <script src="scripts/vendor/backbone.js"></script>
+		<script src="scripts/vendor/backgrid/backgrid.js"></script>
+		<script src="scripts/vendor/backbone-pageable.js"></script>		
+		<script src="scripts/vendor/backgrid/extensions/moment-cell/backgrid-moment-cell.js"></script>
+		<script src="scripts/vendor/backgrid/extensions/paginator/backgrid-paginator.js"></script>		
+		<script src="scripts/vendor/bootbox.js"></script>
+		<script src="scripts/vendor/plugins/backbone-relational.js"></script>
+		<script src="scripts/vendor/plugins/backbone.layoutmanager.js"></script>
+		<script src="scripts/vendor/forms/backbone-forms.js"></script>
+		<script src="scripts/vendor/forms/adapters/backbone.bootstrap-modal.js"></script>
+		<script src="scripts/vendor/forms/editors/list.js"></script>
+		<script src="scripts/vendor/forms/editors/buttons-checkboxes.js"></script>
+		<script src="scripts/vendor/forms/editors/select2.js"></script>		
+		<script src="scripts/vendor/forms/templates/bootstrap.js"></script>
+		<script src="scripts/vendor/select2/select2.js"></script>
+		<script src="scripts/vendor/select2/select2_locale_ru.js"></script>
+		<script src="scripts/vendor/jquery.ui/jquery.ui.core.js"></script>
+  	<script src="scripts/vendor/jquery.ui/jquery.ui.widget.js" ></script>
+  	<script src="scripts/vendor/jquery.ui/jquery.ui.position.js" ></script>
+  	<script src="scripts/vendor/jquery.ui/jquery.ui.menu.js" ></script>
+  	<script src="scripts/vendor/jquery.ui/jquery.ui.autocomplete.js" ></script>
+  	<script src="scripts/vendor/visualsearch/visualsearch.js" ></script>
+		<script src="scripts/main.js"></script>
+    <script src="scripts/helpers/helpers.js"></script>
+    <script src="scripts/models/person-model.js"></script>
+    <script src="scripts/models/detention-model.js"></script>
+    <script src="scripts/models/action-model.js"></script>
+		<script src="scripts/models/police-station-model.js"></script>
+    <script src="scripts/collections/persons-collection.js"></script>
+    <script src="scripts/collections/personType-facet-collection.js"></script>
+    <script src="scripts/collections/regions-facet-collection.js"></script>
+		<script src="scripts/collections/actions-collection.js"></script>
+    <script src="scripts/collections/detentions-collection.js"></script>
+    <script src="scripts/collections/police-stations-collection.js"></script>
+		<script src="scripts/views/persons-views.js"></script>
+		<script src="scripts/views/actions-views.js"></script>
+    <script src="scripts/views/detentions-views.js"></script>
+		<script src="scripts/routes/main-router.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+    	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>

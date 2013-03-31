@@ -1,0 +1,240 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+@import "h5bp.css";
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+  background-color:#edf0f3 !important;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
+
+#wrap > .container-fluid {
+	padding-top: 60px;
+}
+
+hr, #footer {
+  clear: both;
+}
+
+#footer {
+	height:60px;
+	padding: 20px auto;
+	background-color: #f5f5f5;
+}
+
+.container .credit {
+	margin: 20px 0;
+}
+
+.page {
+	margin: auto;
+	background-color: #FFF;
+	border-radius: 6px;
+	padding: 20px 0px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.page .header {
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #EEE;
+}
+
+.page .header h4 {
+	float: left;
+	margin: 5px 0px 10px 0px;
+}
+
+.page .header .btn-toolbar {
+	margin-top: 0px;
+}
+
+.alert-loader {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 10000;
+  padding: 40px 0px 40px 0px;
+  margin-top: -10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border-top: none;
+}
+
+.modal-footer .btn.remove {
+	float: left;
+} 
+
+.backgrid {
+  /*margin-top: 20px;*/
+}
+
+.backgrid th {
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.backgrid a {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333;
+  font-weight: bold;
+}
+
+.backgrid tr td:first-child {
+  border-left: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  border-right: 1px dotted #DDD !important;
+}
+
+.backgrid td {
+  border-left: 1px dotted #DDD !important;
+  border-bottom: 1px solid #DDD;
+  border-right: 1px dotted #DDD !important;
+}
+
+ 
+.clip {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    float: left;
+    background-color: white;
+    cursor: pointer;
+    list-style: none;
+}
+.clip:hover {
+    background: whitesmoke;
+}
+.clip .clip-title, .clip .clip-author-name {
+    font-size: 18px;
+    line-height: 27px;
+    max-height: 54px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+.clip .clip-selection, .clip .clip-description {
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 18px;
+}
+.clip .clip-selection h3 {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+.clip .clip-selection p, .clip .clip-description p {
+    font-size: 14px;
+    line-height: 18px;
+    white-space: normal;
+    margin: 0;
+    font-weight: normal;
+}
+.clip .clip-selection {
+    font-style: italic;
+    border-color: rgba(208, 55, 55, 0.25);
+    border-width: 3px;
+    padding: 0 0 0 9px;
+}
+.clip .clip-footer {
+    font-size: 12px;
+    color: #999;
+}
+.clip .clip-footer a {
+    color: #999;
+}
+.clip .clip-footer .clip-footer-element {
+    display: inline-block;
+    margin-left: 4.5px;
+}
+.clip .clip-footer .clip-footer-element:before {
+    margin-right: 4.5px;
+    content: "·";
+    font-weight: bold;
+}
+.clip .clip-footer .clip-footer-element.first {
+    margin-left: 0;
+}
+.clip .clip-footer .clip-footer-element.first:before {
+    margin-right: 0;
+    content: none;
+}
+.clip .clip-footer .clip-date {
+    color: #999;
+    overflow: hidden;
+}
+.clip .clip-footer .clip-source {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+.clip.clip-grid {
+    width: 300px;
+    height: 234px;
+    margin: 15px 30px 15px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.clip.clip-grid .clip-content {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    left: 18px;
+    bottom: 54px;
+    overflow: hidden;
+}
+.clip.clip-grid .clip-content .clip-content-header {
+    height: 34px;
+}
+.clip.clip-grid .clip-footer {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    padding: 18px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 18px;
+}
+
+.data-view-sidebar .well {
+	padding: 8px 0;
+	font-size: 11px;
+}
+
+.data-view-sidebar span.badge {
+	float: right;
+}

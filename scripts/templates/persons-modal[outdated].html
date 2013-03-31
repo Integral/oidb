@@ -1,0 +1,60 @@
+<div id="addPerson" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPersonLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close destroy" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= (person)?'Редактировать персону':'Добавить персону' %></h3>
+  </div>
+  <div class="modal-body">
+		<form class="form-horizontal" id="addPersonForm">
+			<div class="control-group">
+				<div class="controls-row">
+					<input class="input-medium" type="text" placeholder="Фамилия" id="lastName" <% if(person){ %> value="<%= person.lastName %>" <% } %>>
+					<input class="input-medium" type="text" placeholder="Имя" id="firstName" <% if(person){ %> value="<%= person.firstName %>" <% } %>>
+					<input class="input-medium" type="text" placeholder="Отчество" id="middleName" <% if(person){ %> value="<%= person.middleName %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="phone">Телефон</label>
+				<div class="controls">
+					<input type="hidden" class="input-xlarge multiple" id="phone" data-format="+7 (ddd) ddd-dd-dd" <% if(person){ %> value="<%= person.phone %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="email">E-mail</label>
+				<div class="controls">
+					<input type="hidden" class="input-xlarge multiple" id="email" <% if(person){ %> value="<%= person.email %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="twitter">Twitter</label>
+				<div class="controls">
+					<input type="hidden" class="input-xlarge multiple" id="twitter" <% if(person){ %> value="<%= person.twitter %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="facebook">Facebook</label>
+				<div class="controls">
+					<input type="hidden" class="input-xlarge multiple" id="facebook" <% if(person){ %> value="<%= person.facebook %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="region">Регион</label>
+				<div class="controls">
+					<input type="hidden" class="input-xlarge multiple" id="region" <% if(person){ %> value="<%= person.region %>" <% } %>>
+				</div>
+			</div>
+			<div class="control-group">
+				<div id="personType" class="btn-group type" data-toggle="buttons-checkbox">
+  				<button class="btn btn-danger <% if(person && _.indexOf(person.personType, 'задержант') !== -1){ %> <%= 'active' %> <% } %>" value="задержант">задержант</button>
+  				<button class="btn btn-warning <% if(person && _.indexOf(person.personType, 'политзек') !== -1){ %> <%= 'active' %> <% } %>" value="политзек">политзек</button>
+  				<button class="btn btn-success <% if(person && _.indexOf(person.personType, 'экоузник') !== -1){ %> <%= 'active' %> <% } %>" value="экоузник">экоузник</button>
+					<button class="btn btn-info <% if(person && _.indexOf(person.personType, 'участник') !== -1){ %> <%= 'active' %> <% } %>" value="участник">участник</button>
+				</div>
+			</div>
+    </form>
+	</div>
+  <div class="modal-footer">
+		<% if(person) { %><button class="btn btn-danger remove" data-dismiss="modal">Удалить</button><% } %>
+    <button class="btn destroy" data-dismiss="modal" aria-hidden="true">Отмена</button>
+    <button class="btn btn-primary <%= (person)?'edit':'create' %>" data-dismiss="modal">Сохранить</button>
+  </div>
+</div>

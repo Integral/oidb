@@ -1,0 +1,14 @@
+<div id="addPerson" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="addPersonLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close destroy" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= (!person.new)?'Редактировать персону':'Добавить персону' %></h3>
+  </div>
+  <div class="modal-body">
+	</form>
+	</div>
+  <div class="modal-footer">
+		<% if(!person.new) { %><button class="btn btn-danger remove" data-dismiss="modal">Удалить</button><% } %>
+    <button class="btn destroy" data-dismiss="modal" aria-hidden="true">Отмена</button>
+    <button class="btn btn-primary <%= (!person.new)?'edit':'create' %>">Сохранить</button>
+  </div>
+</div>
